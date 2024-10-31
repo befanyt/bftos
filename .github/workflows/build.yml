@@ -10,11 +10,6 @@ on:
       - main
   workflow_dispatch:
 
-permissions:
-  contents: read
-  packages: write
-  id-token: write
-
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref || github.run_id }}
   cancel-in-progress: true
