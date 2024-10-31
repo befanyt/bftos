@@ -2,6 +2,8 @@
 
 set -eoux pipefail
 
+echo "Running image-info branding changes"
+
 image_name="bftos"
 image_flavor="main"
 image_vendor="befanyt"
