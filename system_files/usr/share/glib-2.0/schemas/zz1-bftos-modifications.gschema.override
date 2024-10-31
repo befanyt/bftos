@@ -41,3 +41,5 @@ remove-old-trash-files=true
 remove-old-temp-files=true
 old-files-age=uint32 7
 
+[org.gnome.desktop.sound]
+event-sounds=false
