@@ -43,3 +43,10 @@ old-files-age=uint32 7
 
 [org.gnome.desktop.sound]
 event-sounds=false
+
+[org.gnome.settings-daemon.plugins.color]
+night-light-enabled=true
+night-light-schedule-automatic=false
+night-light-schedule-from=17.0
+night-light-schedule-to=6.0
+night-light-temperature=uint32 4411
