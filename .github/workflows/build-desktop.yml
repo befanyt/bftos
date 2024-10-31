@@ -14,7 +14,7 @@ env:
 
 jobs:
   push-ublue:
-    name: Build Desktop Images
+    name: Build Desktop
     runs-on: ubuntu-24.04
     continue-on-error: false
     permissions:
