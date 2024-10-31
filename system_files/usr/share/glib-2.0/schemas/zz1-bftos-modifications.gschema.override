@@ -50,3 +50,9 @@ night-light-schedule-automatic=false
 night-light-schedule-from=17.0
 night-light-schedule-to=6.0
 night-light-temperature=uint32 4411
+
+[org.gnome.nautilus.preferences]
+default-folder-viewer="list-view"
+
+[org.gnome.nautilus.list-view]
+default-zoom-level="small"
