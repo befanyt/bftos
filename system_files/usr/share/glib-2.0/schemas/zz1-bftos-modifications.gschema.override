@@ -58,4 +58,4 @@ default-folder-viewer="list-view"
 default-zoom-level="small"
 
 [org.gnome.mutter]
-experimental-features=['variable-refresh-rate', 'scale-monitor-framebuffer']
+experimental-features=['variable-refresh-rate', 'scale-monitor-framebuffer', 'xwayland-native-scaling']
