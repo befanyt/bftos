@@ -18,7 +18,7 @@ PACKAGES=(
 rpm-ostree install dnf5 dnf5-plugins
 
 # Prefer vim over nano as default editor
-dnf5 swap nano-default-editor vim-default-editor --allowerasing
+dnf5 swap -y nano-default-editor vim-default-editor --allowerasing
 
 echo "Adding the needed repositories"
 for repo in "${!REPOS[@]}"; do
