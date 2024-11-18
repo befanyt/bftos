@@ -12,6 +12,7 @@ declare -Ar REPOS=(
 # Packages to install
 PACKAGES=(
 	gh
+	btop
 )
 
 # Prefer vim over nano as default editor
