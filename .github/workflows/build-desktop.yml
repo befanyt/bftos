@@ -11,6 +11,10 @@ on:
   workflow_dispatch:
 
 jobs:
+  build-desktop-toolbox:
+    name: Desktop Toolbox
+    uses: ./.github/workflows/toolbox-build.yml
+    secrets: inherit
   build-desktop-stable:
     name: Desktop Stable
     uses: ./.github/workflows/reusable-build.yml
