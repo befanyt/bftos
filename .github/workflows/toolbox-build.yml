@@ -58,8 +58,8 @@ jobs:
           command: |
             set -euox pipefail
 
-            podman push bftos:toolbox ${{ steps.registry_case.outputs.lowercase }}/bftos:toolbox
-            digest=$(skopeo inspect docker://${{ steps.registry_case.outputs.lowercase }}/bftos:toolbox --format '{{.Digest}}')
+            sudo podman push bftos:toolbox ${{ steps.registry_case.outputs.lowercase }}/bftos:toolbox
+            digest=$(sudo skopeo inspect docker://${{ steps.registry_case.outputs.lowercase }}/bftos:toolbox --format '{{.Digest}}')
             echo "digest=${digest}" >> $GITHUB_OUTPUT
 
       - uses: sigstore/cosign-installer@v3.7.0
