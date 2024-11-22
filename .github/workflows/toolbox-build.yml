@@ -34,7 +34,7 @@ jobs:
         id: build_toolbox
         shell: bash
         run: |
-          just build-toolbox 
+          sudo just build-toolbox 
 
       - name: Lowercase Registry
         id: registry_case
