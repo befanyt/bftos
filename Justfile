@@ -349,3 +349,20 @@ fedora_version image="bluefin" tag="stable" flavor="main":
     fedora_version=$(jq -r '.Labels["ostree.linux"]' < /tmp/manifest.json | grep -oP 'fc\K[0-9]+')
     echo "${fedora_version}"
 
+# Build toolbox
+[group('Toolbox')]
+build-toolbox:
+    #!/usr/bin/bash
+    set -eoux pipefail
+
+    # Labels
+    LABELS=()
+    LABELS+=("--label" "io.artifacthub.package.readme-url=https://raw.githubusercontent.com/{{ repo_organization }}/{{ repo_name }}/refs/heads/main/README.md")
+    LABELS+=("--label" "org.opencontainers.image.title={{ my_image_styled }} toolbox")
+    LABELS+=("--label" "org.opencontainers.image.description=This toolbox is a companion distrobox image for {{ my_image_styled }} based on fedora-toolbox")
+
+    # Build Image
+    podman build \
+        "${LABELS[@]}" \
+        --tag "{{ my_image }}:toolbox" \
+        ./toolbox/
