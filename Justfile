@@ -360,12 +360,14 @@ build-toolbox:
     LABELS+=("--label" "io.artifacthub.package.readme-url=https://raw.githubusercontent.com/{{ repo_organization }}/{{ repo_name }}/refs/heads/main/README.md")
     LABELS+=("--label" "org.opencontainers.image.name=bftos-toolbox")
     LABELS+=("--label" "org.opencontainers.image.url=https://github.com/befanyt/bftos")
+    LABELS+=("--label" "org.opencontainers.image.source=https://github.com/befanyt/bftos")
     LABELS+=("--label" "org.opencontainers.image.vendor=befanyt")
     LABELS+=("--label" "org.opencontainers.image.title={{ my_image_styled }} toolbox")
+    LABELS+=("--label" "org.opencontainers.image.licenses=MIT")
     LABELS+=("--label" "org.opencontainers.image.description=This toolbox is a companion distrobox image for {{ my_image_styled }} based on fedora-toolbox")
 
     # Build Image
     podman build \
         "${LABELS[@]}" \
         --tag "{{ my_image }}:toolbox" \
-        ./toolbox/
+        --file ./toolbox/Containerfile
