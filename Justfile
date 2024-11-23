@@ -358,6 +358,9 @@ build-toolbox:
     # Labels
     LABELS=()
     LABELS+=("--label" "io.artifacthub.package.readme-url=https://raw.githubusercontent.com/{{ repo_organization }}/{{ repo_name }}/refs/heads/main/README.md")
+    LABELS+=("--label" "org.opencontainers.image.name=bftos-toolbox")
+    LABELS+=("--label" "org.opencontainers.image.url=https://github.com/befanyt/bftos")
+    LABELS+=("--label" "org.opencontainers.image.vendor=befanyt")
     LABELS+=("--label" "org.opencontainers.image.title={{ my_image_styled }} toolbox")
     LABELS+=("--label" "org.opencontainers.image.description=This toolbox is a companion distrobox image for {{ my_image_styled }} based on fedora-toolbox")
 
