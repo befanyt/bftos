@@ -17,6 +17,3 @@ glib-compile-schemas /usr/share/glib-2.0/schemas &>/dev/null
 if [[ -f /usr/share/applications/btop.desktop ]]; then
     sed -i 's@\[Desktop Entry\]@\[Desktop Entry\]\nHidden=true@g' /usr/share/applications/btop.desktop
 fi
-
-# Enable podman-auto-update timer on boot
-sed -i 's@\[Timer\]@\[Timer\]\nOnBootSec=15min@g' /usr/lib/systemd/user/podman-auto-update.timer
