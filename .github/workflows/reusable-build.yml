@@ -89,7 +89,7 @@ jobs:
         uses: ublue-os/remove-unwanted-software@v7
 
       - name: Pull Images
-        uses: Wandalen/wretry.action@v3.7.3
+        uses: Wandalen/wretry.action@v3.8.0
         id: pull
         with:
           attempt_limit: 3
@@ -137,7 +137,7 @@ jobs:
       - name: Push to GHCR
         id: push
         if: github.event_name != 'pull_request'
-        uses: Wandalen/wretry.action@v3.7.3
+        uses: Wandalen/wretry.action@v3.8.0
         with:
           attempt_limit: 3
           attempt_delay: 15000
